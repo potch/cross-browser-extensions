@@ -1,0 +1,24 @@
+{
+  "name": "cross-browser-extensions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "decky.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/potch/browsers-update-2018-07.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potch/browsers-update-2018-07/issues"
+  },
+  "homepage": "https://github.com/potch/browsers-update-2018-07#readme",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

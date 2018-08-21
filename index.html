@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Cross-Browser Browser Extensions</title>
+    <meta name="description" content="Possibly the most insightful presentation of all time" />
+
+    <link rel="stylesheet" href="tomorrow-night-blue.css">
+    <link rel="stylesheet" href="decky.css">
+    <script src="highlight.min.js"></script>
+    <style>
+      .compat {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        margin: 1em 0;
+      }
+      .compat img {
+        height: calc(var(--slide-height) * .25);
+        filter: grayscale(100%);
+        opacity: .6;
+      }
+      .compat.fx .fx,
+      .compat.op .op,
+      .compat.ch .ch,
+      .compat.ed .ed,
+      .compat.sf .sf {
+        opacity: 1;
+        filter: none;
+      }
+      .compat-grid {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr 1fr 1fr;
+        align-items: center;
+        grid-gap: 1em 1em;
+      }
+      .compat-grid img {
+        height: calc(var(--slide-height) / 8);
+      }
+      .compat-grid img.yes {
+        opacity: 1;
+        filter: none;
+      }
+      .compat-grid code {
+        font-size: .8em;
+        text-align: right;
+      }
+      .browser {
+        height: calc(var(--slide-height) / 8);
+      }
+    </style>
+  </head>
+  <body>
+
+    <section>
+      <h1 style="font-size:5rem;">
+        Cross-Browser<br> Browser Extensions
+      </h1>
+    </section>
+
+    <section>
+      <img src="img/zoid.jpg">
+    </section>
+
+    <section>
+      <iframe style="background:#fff" src="http://doeshoneybadgercare.com/"></iframe>
+    </section>
+
+    <section>
+      <img src="img/moz-logo.svg" style="width:calc(var(--slide-width) * .6)">
+    </section>
+
+    <section data-step="span">
+      <h1>Extension</h1>
+      <big><span>(ĭk-stĕnˈshən)</span><span>, <i>noun.</i></span> <span>A bundle of code and data that modifies or augments the functionality of a piece of software.</span></big>
+    </section>
+
+    <section>
+      <h1>Extensions 🆚 Plugins</h1>
+    </section>
+
+    <section>
+      <h1>Extensions 🆚 Add-ons</h1>
+    </section>
+
+    <section>
+      <h1>Extensions ⊂ Add-ons</h1>
+    </section>
+
+    <section>
+      <h1>Extensions ⊂ Add-ons</h1>
+      <div style="color:#fcc;position:absolute;top:50%;left:50%;transform:translate(-35%,20%)">⬆️<div>read a math once</div></div>
+    </section>
+
+    <section style="filter:sepia(100%)contrast(75%)">
+      <h1 style="font:italic 3rem Georgia;font-weight:300;">A Brief Hiſtory of Extenſions</h1>
+    </section>
+
+    <section>
+      <h1>Internet Explorer</h1>
+      <img src="img/ie6.png">
+      <h3>Version 5, 1999</h3>
+    </section>
+
+    <section>
+      <h1>Firefox</h1>
+      <img src="img/firefox1.png">
+      <h3>Version 1, 2004</h3>
+    </section>
+
+    <section>
+      <h1>Opera</h1>
+      <img src="img/opera10.svg">
+      <h3>Version 10, 2009</h3>
+    </section>
+
+    <section>
+      <h1>Chrome</h1>
+      <img src="img/chrome4.svg">
+      <h3>Version 4, 2010</h3>
+    </section>
+
+    <section>
+      <h1>Safari</h1>
+      <img src="img/safari5.png">
+      <h3>Version 5, 2010</h3>
+    </section>
+
+    <section>
+      <img src="img/moz-logo.svg" style="width:calc(var(--slide-width) * .6)">
+    </section>
+
+    <section>
+      <img src="img/firefox1.png" style="max-height: calc(var(--slide-height) * .6)">
+    </section>
+
+    <section>
+      <div style="font-weight:500;font-size:4.5em;margin-bottom:2rem">XUL</div>
+    </section>
+
+    <section data-step="rt">
+      <div style="font-weight: 500; font-size: 4.5em;">
+        <ruby style="ruby-position: under;">
+          <rb>X</rb> <rt style="font-size: 1.5rem;">XML</rt>
+          <rb>U</rb> <rt style="font-size: 1.5rem;">UI</rt>
+          <rb>L</rb> <rt style="font-size: 1.5rem;">Language</rt>
+        </ruby>
+      </div>
+    </section>
+
+    <section style="font-size:2em" data-step="h3">
+      <h1 style="position:absolute;font-size:4em">Browser</h1>
+      <h3 style="position:absolute;font-size:2em;transform:translate(-50%,-50%)rotate(-11deg);color:red;text-shadow:0 0 .1em #000">EXTENSION</h3>
+      <h3 style="position:absolute;font-size:2em;transform:translate(50%,50%)rotate(15deg);color:red;text-shadow:0 0 .1em #000">EXTENSION</h3>
+      <h3 style="position:absolute;font-size:3.3em;transform:translate(0,-10%)rotate(-24deg);color:red;text-shadow:0 0 .1em #000">EXTENSION</h3>
+    </section>
+
+    <section data-step="h2">
+      <h1 style="text-shadow:0 .2em .3em #f0f,0 -.2em .22em #0f0;">PHENOMENAL COSMIC POWERS</h1>
+      <h2><i>whether you want them or not</i></h2>
+    </section>
+
+    <section>
+      <h1>Add-ons SDK</h1>
+      <h3>2010</h3>
+    </section>
+
+    <section>
+      <h1>An API Surface!</h1>
+    </section>
+
+    <section>
+      <h1 style="font-size:2.5em;">Cu.import()</h1>
+    </section>
+
+    <section>
+      <h1 style="font-size:2.5em;text-shadow:0 .2em .3em #f0f,0 -.2em .22em #0f0;">Cu.import()</h1>
+    </section>
+
+    <section>
+      <img src="img/chrome4.svg" style="max-width:calc(var(--slide-height) * .6)">
+      <h1>Meanwhile&hellip;</h1>
+    </section>
+
+    <section data-step="li">
+      <h1>Chrome Extensions</h1>
+      <ul style="text-align:left;margin:1em 0">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section>
+      Permissions!
+    </section>
+
+    <section>
+      <div class="compat ch op">
+        <img class="ch" src="img/chrome.svg">
+        <img class="op" src="img/opera.svg">
+        <img class="fx" src="img/firefox.svg">
+        <img class="ed" src="img/edge.svg">
+        <img class="sa" src="img/safari.png">
+      </div>
+    </section>
+
+    <section>
+      <h1>So&hellip;</h1>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:2rem;font-family:sans-serif;background:linear-gradient(to bottom,#d5e4ed,#e7ecf0);padding:2rem;">
+        <div style="
+          font-weight:300;
+          text-align:center;
+          padding:1rem;
+          background:#fff;
+          line-height:.8;
+          border-radius:.5em;
+          color:#333;
+          width:8rem;
+          height:8rem;
+          font-size:2rem;
+          display:grid;
+          grid-template-rows:auto auto auto;
+          align-items:center;
+          justify-content:center;
+          border:.1rem solid #ccc;
+          background:linear-gradient(to bottom,#f8f8f8 49%,#ccc 49%,#ccc 50%,#fff 50%);
+          box-shadow:
+            0 .5rem 0 -.1rem #fff,
+            0 .5rem #ccc,
+            0 1rem 0 -.1rem #fff,
+            0 1rem #ccc;
+        ">
+          <small>AUG</small>
+          <div style="font-size:3.5rem;line-height:1">21</div>
+          <small>2015</small>
+        </div>
+        <h2 style="text-shadow:0 .1rem 0 #fff;text-align:left;color:#333;font-weight:300;font-size:3rem;">The Future of Developing Firefox Add-ons</h2>
+      </div>
+    </section>
+
+    <section>
+      <p style="font-size:2rem;position:relative;"><span style="font-style:italic;font-size:4rem;">&ldquo;</span>We are implementing a new extension API, called WebExtensions—largely compatible with the model used by Chrome and Opera—to make it easier to develop extensions across multiple browsers.<span style="font-style:italic;font-size:4rem;position:absolute;bottom:-3rem;">&rdquo;</span</p>
+    </section>
+
+    <section>
+      <div class="compat ch op">
+        <img class="ch" src="img/chrome.svg">
+        <img class="op" src="img/opera.svg">
+        <img class="fx" src="img/firefox.svg">
+        <img class="ed" src="img/edge.svg">
+        <img class="sa" src="img/safari.png">
+      </div>
+    </section>
+
+    <section>
+      <div class="compat ch op fx">
+        <img class="ch" src="img/chrome.svg">
+        <img class="op" src="img/opera.svg">
+        <img class="fx" src="img/firefox.svg">
+        <img class="ed" src="img/edge.svg">
+        <img class="sa" src="img/safari.png">
+      </div>
+    </section>
+
+    <section>
+      <h2>September 2016</h2>
+      <div style="position:relative;background:#ecede2;color:#333;font-size:1rem;text-align:left;overflow:hidden;padding-bottom:2rem;">
+        <div style="height:6em;background:#fff;transform:skewY(-12deg);transform-origin:top left;"></div>
+        <img style="position:absolute;top:1.3rem;left:1.5rem;width:4rem;" src="img/w3c-logo.svg">
+        <h3 style="margin:1rem;text-align:left;">Browser Extension Community Group</h3>
+        <p style="margin:1rem;">Problem: There is no cross browser standard for building browser extensions, which requires developers to create extensions for each browser individually. Proposal/Mission: The Browser Extension group will attempt to standardize extension package structure, API, portability etc., across browsers.</p>
+      </div>
+    </section>
+
+    <section>
+      <img src="img/edge.svg" style="max-width:calc(var(--slide-height) * .6)">
+      <h2>and then they were like&hellip;</h2>
+    </section>
+
+    <section>
+      <div style="text-align:left;color:#333;border:2rem solid #f0f0f0;background:#fff;border-bottom:0 none;padding:2rem;font-family:sans-serif">
+        <small style="text-align:left;color:#767676;font-size:1rem">March 17, 2016 4:02 pm</small>
+        <h2 style="text-align:left;line-height:1;margin:.5em 0;font-size:2rem;">Microsoft Edge extensions now available to preview</h2>
+        <small style="text-align:left;font-size:1rem">By <span style="color:#0078d7">Microsoft Edge Team</span></small>
+      </div>
+    </section>
+
+    <section>
+      <div class="compat ch op fx">
+        <img class="ch" src="img/chrome.svg">
+        <img class="op" src="img/opera.svg">
+        <img class="fx" src="img/firefox.svg">
+        <img class="ed" src="img/edge.svg">
+        <img class="sa" src="img/safari.png">
+      </div>
+    </section>
+
+    <section>
+      <div class="compat ch op fx ed">
+        <img class="ch" src="img/chrome.svg">
+        <img class="op" src="img/opera.svg">
+        <img class="fx" src="img/firefox.svg">
+        <img class="ed" src="img/edge.svg">
+        <img class="sa" src="img/safari.png">
+      </div>
+    </section>
+
+    <section>
+      <h1 style="font-weight:200;font-style:italic"><i>The Present Day</i></h1>
+    </section>
+
+    <section>
+      <img style="mix-blend-mode:lighten;filter:invert(100%)" src="https://mdn.mozillademos.org/files/13669/webextension-anatomy.png">
+    </section>
+
+    <section>
+      <pre><code class="json">{
+  "manifest_version": 2,
+  "name": "David Blaine's Cool Extension",
+  "version": "1.0",
+  "description": "Literally MAGIC",
+  "icons": {
+    "48": "/icon.svg"
+  }
+}</code></pre>
+    </section>
+
+    <section>
+      <pre><code class="js">const { tabs, browserAction } = browser.browserAction;
+
+browserAction.onClicked.addListener(async function() {
+  let tab = await tabs.create({
+    url:"https://example.org"
+  });
+
+  let heading = await tabs.executeScript(tab.id, {
+    code: `document.querySelector('h1').textContent;`
+  });
+});</code></pre>
+    </section>
+
+    <section>
+      <h1>Pages 🆚 Workers</h1>
+    </section>
+
+    <section data-step="div">
+      <pre><code class="json">"background": {
+  "scripts": ["polyfill.js", "my-background.js"]
+}
+
+<div>// or...
+"background": {
+  "page": "my-background.html"
+}</div></code></pre>
+    </section>
+
+    <section>
+      <pre><code class="html">&lt;html>
+  &lt;head>
+    &lt;script src="polyfill.js">&lt;/script>
+    &lt;script src="my-background.js">&lt;/script>
+  &lt;/head>
+&lt;/html></code></pre>
+    </section>
+
+    <section>
+      <pre><code class="html">&lt;div class="something useful">&lt;/div>
+&lt;script src="polyfill.js">&lt;/script>
+&lt;script src="dom-library.js">&lt;/script>
+&lt;script type="module" src="my-background.js">&lt;/script></code></pre>
+    </section>
+
+    <section>
+      <svg viewbox="-5 -5 810 510">
+        <g stroke="#fff" fill="none" stroke-width="4" style="font-size:1.5rem;">
+          <rect x="0" y="0" width="800" height="150"/>
+          <text stroke="none" fill="#fff" x="0" y="85">
+            <tspan x="400" text-anchor="middle">
+              Background Script
+            </tspan>
+          </text>
+          <rect x="0" y="250" width="300" height="100"/>
+          <text stroke="none" fill="#fff" x="0" y="310">
+            <tspan x="150" text-anchor="middle">
+              content script
+            </tspan>
+          </text>
+          <rect x="500" y="250" width="300" height="100"/>
+          <text stroke="none" fill="#fff" x="0" y="310">
+            <tspan x="650" text-anchor="middle">
+              devtools.panel
+            </tspan>
+          </text>
+          <rect x="250" y="400" width="300" height="100"/>
+          <text stroke="none" fill="#fff" x="0" y="460">
+            <tspan x="400" text-anchor="middle">
+              browserAction
+            </tspan>
+          </text>
+          <path d="M150,150v100"/>
+          <path d="M650,150v100"/>
+          <path d="M400,150v250"/>
+        </g>
+      </svg>
+    </section>
+
+    <section data-step="span" style="font-size:1.5rem;line-height:1.6">
+      <div><span>alarms</span>
+      <span>bookmarks</span>
+      <span>browserAction</span>
+      <span>browserSettings</span>
+      <span>browsingData</span>
+      <span>clipboard</span>
+      <span>commands</span>
+      <span>contentScripts</span>
+      <span>contextualIdentities</span>
+      <span>cookies</span>
+      <span>devtools.inspectedWindow</span>
+      <span>devtools.network</span>
+      <span>devtools.panels</span>
+      <span>dns</span>
+      <span>downloads</span>
+      <span>events</span>
+      <span>extension</span>
+      <span>extensionTypes</span>
+      <span>find</span>
+      <span>history</span>
+      <span>i18n</span>
+      <span>identity</span>
+      <span>idle</span>
+      <span>management</span>
+      <span>menus</span>
+      <span>notifications</span>
+      <span>omnibox</span>
+      <span>pageAction</span>
+      <span>permissions</span>
+      <span>pkcs11</span>
+      <span>privacy</span>
+      <span>proxy</span>
+      <span>runtime</span>
+      <span>search</span>
+      <span>sessions</span>
+      <span>sidebarAction</span>
+      <span>storage</span>
+      <span>tabs</span>
+      <span>theme</span>
+      <span>topSites</span>
+      <span>types</span>
+      <span>webNavigation</span>
+      <span>webRequest</span>
+      <span>windows</span></div>
+    </section>
+
+    <section>
+      <style>
+        .venn {
+          position: absolute;
+          width: calc(var(--slide-height) * .5);
+          height: calc(var(--slide-height) * .5);
+          border-radius: 50%;
+          border: .1em solid #fff;
+          display: grid;
+          align-items:center;
+          justify-content: center;
+          mix-blend-mode: lighten;
+          grid-auto-flow: column;
+          grid-gap: .3em;
+        }
+        .venn img {
+          height: calc(var(--slide-height) * .1);
+          mix-blend-mode: normal;
+        }
+      </style>
+      <div style="background:#faa8;transform:translate(0,-20%)" class="venn">
+        <img style="transform:translate(0, -150%)" src="img/chrome.svg">
+        <img style="transform:translate(0, -150%)" src="img/opera.svg">
+      </div>
+      <div style="background:#afa8;transform:translate(20%,15%)" class="venn">
+        <img style="transform:translate(140%, 60%)" src="img/firefox.svg">
+      </div>
+      <div style="background:#aaf8;transform:translate(-20%,15%)" class="venn">
+        <img style="transform:translate(-140%, 60%)" src="img/edge.svg">
+      </div>
+      <div>a lot</div>
+    </section>
+
+    <section data-step="h2">
+      <h1>Feature Detection!!</h1>
+      <h2>no wait please don't leave</h2>
+    </section>
+
+    <section>
+      <h2>Browser Extensions</h2>
+      <div class="compat compat-grid">
+        <code>chrome.*</code>
+        <img class="ch yes" src="img/chrome.svg">
+        <img class="op yes" src="img/opera.svg">
+        <img class="fx yes" src="img/firefox.svg">
+        <img class="ed yes" src="img/edge.svg">
+
+        <code>browser.*</code>
+        <img class="ch" src="img/chrome.svg">
+        <img class="op yes" src="img/opera.svg">
+        <img class="fx yes" src="img/firefox.svg">
+        <img class="ed yes" src="img/edge.svg">
+
+        <code>browser.*<br><small>(Promises)</small></code>
+        <img class="ch" src="img/chrome.svg">
+        <img class="op" src="img/opera.svg">
+        <img class="fx yes" src="img/firefox.svg">
+        <img class="ed" src="img/edge.svg">
+      </div>
+    </section>
+
+    <section data-step=".soon">
+      <h2>mozilla/webextension-polyfill</h2>
+      <div class="compat compat-grid">
+        <code>browser.*<br><small>(Promises)</small></code>
+        <img class="ch yes" src="img/chrome.svg">
+        <img class="op yes" src="img/opera.svg">
+        <img class="fx yes" src="img/firefox.svg">
+        <div style="position:relative;">
+          <img class="ed" src="img/edge.svg">
+          <span class="soon" style="position:absolute;left:50%;top:50%;font-size:1em;transform:translate(-50%,-50%)rotate(-24deg);color:red;text-shadow:0 0 .1em #000">SOON</span>
+        </div>
+      </div>
+    </section>
+
+    <style>
+
+      .safari {
+        animation: 5s linear 3s forwards paused slidein;
+      }
+      .active .safari {
+        animation-play-state: running;
+      }
+
+      @keyframes slidein {
+        from {
+          transform: translate(0, 100%);
+        }
+        to {
+          transform: translate(0, 25%);
+        }
+      }
+    </style>
+
+    <section>
+      <h2 style="margin-bottom: 2rem;">Thanks!</h2>
+      <a href="https://twitter.com/potch">@potch</a>
+      <a href="https://hacks.mozilla.org/">Mozilla Hacks Blog</a>
+      <small><a href="https://potch.github.io/cross-browser-extensions/">potch.github.io/cross-browser-extensions</a></small>
+      <img class="safari" style="position:absolute;width:120vw;max-height:none;transform:translate(0, 100%);" src="img/safari.png">
+    </section>
+
+    <section style="filter:sepia(100%);">
+      <h1>Safari</h1>
+      <img src="img/safari5.png">
+      <h3>Version 5, 2010</h3>
+    </section>
+
+    <section>
+      <style>
+        .venn {
+          position: absolute;
+          width: calc(var(--slide-height) * .5);
+          height: calc(var(--slide-height) * .5);
+          border-radius: 50%;
+          border: .1em solid #fff;
+          display: grid;
+          align-items:center;
+          justify-content: center;
+          mix-blend-mode: lighten;
+          grid-auto-flow: column;
+          grid-gap: .3em;
+        }
+        .venn img {
+          height: calc(var(--slide-height) * .1);
+          mix-blend-mode: normal;
+        }
+      </style>
+      <div style="background:#faa8;transform:translate(20%,-20%)" class="venn">
+        <img style="transform:translate(140%, -150%)" src="img/chrome.svg">
+        <img style="transform:translate(100%, -75%)" src="img/opera.svg">
+      </div>
+      <div style="background:#afa8;transform:translate(20%,20%)" class="venn">
+        <img style="transform:translate(120%, 120%)" src="img/firefox.svg">
+      </div>
+      <div style="background:#aaf8;transform:translate(-20%,-20%)" class="venn">
+        <img style="transform:translate(-120%, -120%)" src="img/safari.png">
+      </div>
+      <div style="background:#aff8;transform:translate(-20%,20%)" class="venn">
+        <img style="transform:translate(-120%, 120%)" src="img/edge.svg">
+      </div>
+    </section>
+
+    <section>
+      <pre><code class="js">// Safari
+safari.self.browserWindow.openTab();
+
+// Elsewhere
+browser.tabs.create();</code></pre>
+    </section>
+
+    <section>
+      <h1 style="font-size:6em">So!</h1>
+    </section>
+
+    <section>
+      <h1>Build!</h1>
+    </section>
+
+    <section>
+      <code style="font-size:1.2em">npm i -g web-ext</code>
+    </section>
+
+    <section>
+      <h1>Port!</h1>
+    </section>
+
+    <section>
+      <h2>extensiontest.com</h2>
+    </section>
+
+    <section>
+      <h2>extensiontest.com</h2>
+      <div class="compat ch op fx">
+        <img class="browser ch" src="img/chrome.svg">
+        <img class="browser op" src="img/opera.svg">
+        <span style="font-size:3em">➡️</span>
+        <img class="browser fx" src="img/firefox.svg">
+      </div>
+    </section>
+
+    <section>
+      <h1>Kvetch!</h1>
+    </section>
+
+    <section>
+      <h2>
+        <div style="display:inline-block;vertical-align:middle;"><img style="border-radius:50%;background:#fff;width:calc(var(--slide-width) / 10);" src="img/giraffe.svg"> @potch</div>
+      </h2>
+    </section>
+
+    <section>
+      <h2 style="margin-bottom: 2rem;">Thanks!</h2>
+      <a href="http://bit.ly/mdn-extensions">Browser Extensions on MDN</a>
+      <a href="https://twitter.com/potch">@potch</a>
+      <a href="https://hacks.mozilla.org/">Mozilla Hacks Blog</a>
+      <br><br>
+      <small><a href="https://potch.github.io/cross-browser-extensions/">potch.github.io/cross-browser-extensions</a></small>
+    </section>
+
+    <footer>
+      <div class="progress talk-progress"></div>
+      <div class="progress time-progress"></div>
+    </footer>
+    <script>
+      let steppedSlides = [...document.querySelectorAll('section[data-step]')];
+      steppedSlides.forEach(slide => {
+        let stepBy = slide.getAttribute('data-step') || 'li';
+        let stepCount = slide.querySelectorAll(stepBy).length;
+        for (let i = stepCount; i > 0; i--) {
+          let newSlide = slide.cloneNode(true);
+          let steps = newSlide.querySelectorAll(stepBy);
+          for (let j = 0; j < i; j++) {
+            steps[stepCount - j - 1].classList.add('hide');
+          }
+          slide.parentNode.insertBefore(newSlide, slide);
+        }
+      });
+    </script>
+    <script src="decky.js"></script>
+    <script>
+
+      var els = document.querySelectorAll('code[data-src]');
+      Array.from(els).forEach(function (el) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", function () {
+          el.innerHTML = this.responseText.replace('<', '&lt;', 'g');
+          hljs.highlightBlock(el);
+        });
+        xhr.open("GET", el.getAttribute('data-src'));
+        xhr.send();
+      });
+
+      var iframes = document.querySelectorAll('iframe');
+      iframes = Array.from(iframes);
+      iframes.forEach(function (i) {
+        var src = i.src;
+        i.setAttribute('data-src', src);
+        i.src = '';
+      });
+
+      var talkProgress = document.querySelector('.talk-progress');
+      var timeProgress = document.querySelector('.time-progress');
+      var sTime;
+      var timer;
+      var going = false;
+      decky.onSlideChange = function (n) {
+        if (n > 1 && !going) {
+          going = true;
+          timer = setInterval(update, 100);
+          sTime = Date.now();
+          console.log('starting timer');
+        }
+
+        var pct = n / decky.num * 100;
+        talkProgress.style.transform = 'translate(' + pct + '%, 0)';
+
+        iframes.forEach(function (i) {
+          i.src = '';
+        });
+
+        var f = document.querySelector('.active iframe');
+        if (f && window.top === window) {
+          f.src = f.getAttribute('data-src');
+        }
+      };
+      function update() {
+        var time = Math.min(100, ((Date.now() - sTime) / (30 * 60 * 1000)) * 100);
+        timeProgress.style.transform = 'translate(' + time + '%, 0)';
+      }
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
